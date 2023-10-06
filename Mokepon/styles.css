@@ -1,0 +1,17 @@
+.titulo {
+    color: rgb(167, 163, 233);
+    width: 280px;
+    height: 50px;
+    background-color: teal;
+
+}
+
+label {
+    background-color: tomato;
+}
+input {
+    background-color: aqua;
+}
+button{
+    background-color: bisque;
+}
