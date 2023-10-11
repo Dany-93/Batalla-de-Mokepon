@@ -7,6 +7,7 @@ let vidasEnemigo = 3
 function iniciarJuego(){
     let sectionSeleccionarAtaque = document.getElementById('Selecionar-ataque')
     sectionSeleccionarAtaque.style.display = 'none'
+
     let sectionReiniciar = document.getElementById('Reiniciar')
     sectionReiniciar.style.display = 'none'
 
@@ -25,8 +26,12 @@ function iniciarJuego(){
 }
 
 function selecionarmascotajugador () {
+    let sectionSeleccionarMascota = document.getElementById('Selecionar-Mascota')
+    sectionSeleccionarMascota.style.display = 'none'
+
     let sectionSeleccionarAtaque = document.getElementById('Selecionar-ataque')
-    sectionSeleccionarAtaque.style.display = 'block'
+    sectionSeleccionarAtaque.style.display = 'flex'
+
     let input1=document.getElementById("Hipodoge")
     let input2=document.getElementById("Capipepo")
     let input3=document.getElementById("Ratigueya")
@@ -55,6 +60,7 @@ function selecionarmascotajugador () {
     }
     else {
         alert("Seleciona una mascota")
+        sectionSeleccionarAtaque.style.display = 'none'
     }
     selecionarmascotaEnemigo ()
 }
@@ -100,7 +106,6 @@ function ataqueAleatorioEnemigo() {
        if (ataqueAleatorio==1){
         ataqueEnemigo = 'Fuego'
         
-
     } else if (ataqueAleatorio==2){
         ataqueEnemigo ='Agua'
        
@@ -132,17 +137,33 @@ function combate() {
     revisarVidas()
 }
 function crearMensaje(resultado) {
-    let sectionMensajes = document.getElementById('Mensaje')
-    let parrafo = document.createElement('p')
+    let sectionMensajes = document.getElementById('resultado')
+    let ataqueDelJugador = document.getElementById('ataqueJugador')
+    let ataqueDelEnemigo = document.getElementById('ataqueEnemigo')
+    
+  
+    let  nuevoAtaqueDelJugador = document.createElement('p')
+    let  nuevoAtaqueDelEnemigo = document.createElement('p')
+
+    sectionMensajes.innerHTML = resultado
+    nuevoAtaqueDelJugador.innerHTML = ataqueJugador
+    nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
+
+  /*   let parrafo = document.createElement('p')
     parrafo.innerHTML ='Tu mascota ataco con ' + ataqueJugador + ' la mascota del enemigo ataco con ' + ataqueEnemigo + ' ' + resultado
-    sectionMensajes.appendChild(parrafo)    
+     */
+    
+    ataqueDelJugador.appendChild(nuevoAtaqueDelJugador)  
+    ataqueDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)  
+    
+    
 }
 function crearMensajeFinal(resultadoFinal) {
-    let sectionMensajes = document.getElementById('Mensaje')
-    let parrafo = document.createElement('p')  
-    parrafo.innerHTML =  resultadoFinal
-    sectionMensajes.appendChild(parrafo)  
+    let sectionMensajes = document.getElementById('resultado')
 
+   sectionMensajes.innerHTML =  resultadoFinal
+    
+   
     document.getElementById ('Bnt-Fuego').disabled = true
     document.getElementById ('Bnt-Tierra').disabled = true
     document.getElementById ('Bnt-Agua').disabled = true
@@ -156,10 +177,10 @@ function crearMensajeFinal(resultadoFinal) {
 
 function revisarVidas() {
     if (vidasEnemigo==0){
-        crearMensajeFinal("Ganastes! Muy bien")
+        crearMensajeFinal(" Ganastes! Muy bien ")
         
     }else if (vidasJugador == 0){
-        crearMensajeFinal("Tu enemigo jugo mejor que tu")
+        crearMensajeFinal(" Tu enemigo jugo mejor que tu ")
        
     }
     
@@ -174,7 +195,7 @@ function reiniciarJuego() {
         vidasEnemigo ++
         vidasEnemigos.innerHTML = vidasEnemigo
     }else {
-        alert("Sigue intentando")
+        alert(" Sigue intentando ")
     }
     
 }
