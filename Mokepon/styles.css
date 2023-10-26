@@ -1,94 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Pixelify+Sans&display=swap');
 
-
-body{
+body {
     font-family: 'Montserrat', sans-serif;
-    background:#041562;
+
+    background: #4d6ef5;
+
     }
 
 
 .titulo {
     font-family: 'Pixelify Sans', cursive;
-    color: rgb(255, 255, 255);
+    color: #FFFFFF;
     font-size: 32px;
 }
 
-.subtitulo{
-    color: rgb(255, 255, 255); 
+.subtitulo {
+    color: #FFFFFF;
     font-size: 20px;
-
 }
 
-#Selecionar-Mascota{
+#Selecionar-Mascota {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-       
 }
-.tarjetas, .botones{
+
+.tarjetas, .botones {
     display: flex;
     gap: 10px;
-
 }
 
-.terjeta-de-mokepon{
+.terjeta-de-mokepon {
     width: 180px;
     height: 180px;
     background: #11468F;
     padding: 10px;
     box-sizing: border-box;
     margin-left: 10px;
-    border-radius: 30px ;
+    border-radius: 30px;
     border: 3px solid red;
     display: flex;
+
+    color: #FFF;
+
     color: white;
+
     justify-content: center;
     align-items: center;
+}
 
-   }
-   .terjeta-de-mokepon img {
+.terjeta-de-mokepon img {
     width: 80px;
-   }
+}
 
-   #Boton-mascota{
+#Boton-mascota {
     width: 180px;
     height: 40px;
     margin-top: 20px;
     border-radius: 20px;
     background: transparent;
     border: 2px solid white;
-    color: white;
+    color: #FFF;
     font-family: 'Montserrat', sans-serif;
-    
-   }
+}
 
-   input {
+input {
     display: none;
-   }
+}
+
+
+input:checked + label {
+    background-color: red;
+}
 
    input:checked + label{
     background-color: #5D8BF4;
    }
 
-   #Selecionar-ataque{
+
+#Selecionar-ataque {
     flex-direction: column;
     align-items: center;
-   }
-   
-   .boton-Ataque {
+}
+
+.boton-Ataque {
     background: #35A29F;
     padding: 10px;
     box-sizing: border-box;
-    border-radius: 30px ;
+    border-radius: 30px;
     border: 3px solid red;
+
+    color: #FFF;
+
     color: white;
     width: 80px;
+
     font-family: 'Montserrat', sans-serif;
+}
 
-   }
-
-   #Mensaje{
+#Mensaje {
     width: 280px;
     margin-top: 20px;
     background: #eeeeee;
@@ -98,24 +109,37 @@ body{
     align-items: center;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
-   }
+}
 
-   #boton-reiniciar {
+#boton-reiniciar {
     border: none;
+
+    color: #FFF5E0;
+}
+
     color: #fde9be;
    }
 
-   .ataques {
+
+.ataques {
     display: grid;
     grid-template-columns: 100px 100px;
     display: flex;
     justify-content: center;
-   }
+}
 
-   .ataques-Jugador, .ataques-Enemigo {
+.ataques-Jugador, .ataques-Enemigo {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+}
+
+@media (max-width: 360px) {
+    .tarjetas, .botones {
+        flex-direction: column;
+    }
+}
     color: whitesmoke;
     margin-right: 50px;
 
@@ -135,4 +159,5 @@ body{
             flex-direction: column ;
         }
    }
+
 
