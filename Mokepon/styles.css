@@ -2,8 +2,11 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+
     background: #4d6ef5;
-}
+
+    }
+
 
 .titulo {
     font-family: 'Pixelify Sans', cursive;
@@ -31,14 +34,18 @@ body {
 .terjeta-de-mokepon {
     width: 180px;
     height: 180px;
-    background: #35A29F;
+    background: #11468F;
     padding: 10px;
     box-sizing: border-box;
     margin-left: 10px;
     border-radius: 30px;
     border: 3px solid red;
     display: flex;
+
     color: #FFF;
+
+    color: white;
+
     justify-content: center;
     align-items: center;
 }
@@ -62,9 +69,15 @@ input {
     display: none;
 }
 
+
 input:checked + label {
     background-color: red;
 }
+
+   input:checked + label{
+    background-color: #5D8BF4;
+   }
+
 
 #Selecionar-ataque {
     flex-direction: column;
@@ -77,7 +90,12 @@ input:checked + label {
     box-sizing: border-box;
     border-radius: 30px;
     border: 3px solid red;
+
     color: #FFF;
+
+    color: white;
+    width: 80px;
+
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -95,8 +113,13 @@ input:checked + label {
 
 #boton-reiniciar {
     border: none;
+
     color: #FFF5E0;
 }
+
+    color: #fde9be;
+   }
+
 
 .ataques {
     display: grid;
@@ -109,6 +132,7 @@ input:checked + label {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 @media (max-width: 360px) {
@@ -116,3 +140,24 @@ input:checked + label {
         flex-direction: column;
     }
 }
+    color: whitesmoke;
+    margin-right: 50px;
+
+   }
+
+   #mapa{
+    border: 2px solid white;
+ }
+ #ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+   @media (max-width: 360px){
+        .tarjetas, .botones {
+            flex-direction: column ;
+        }
+   }
+
+

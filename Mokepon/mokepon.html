@@ -1,20 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mokepon</title>
-    <script src="./Js/mokepon.js"></script>
-    <link rel="stylesheet" href="./styles.css">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title title>Mokepon</title>
+        <link rel="stylesheet" href="./styles.css">
     
-</head>
-<body>
+    </head>
+    <body>
         
-        <section id="Selecionar-Mascota">
-            <h1 class="titulo"> Mokepon  </h1>
+            <section id="Selecionar-Mascota">
+                <h1 class="titulo"> Mokepon  </h1>
             
-            <h2 class="subtitulo">Elige tu Mascota</h2>
+                <h2 class="subtitulo">Elige tu Mascota</h2>
             
+
             <div class="tarjetas">
                 <input type="radio" name="Mascota" id="Hipodoge">
                 <label class="terjeta-de-mokepon" for="Hipodoge">
@@ -36,36 +36,42 @@
                 
             </div>
 
-            <Button id="Boton-mascota">Selecionar</Button>
-        </section>
+                <div id="contenedorTarjetas" class="tarjetas">
+           
+               </div>
 
-        <section id="Selecionar-ataque">
-            <h1 class="titulo"> Mokepon  </h1>
-            <h2 class="subtitulo"> Elige tu Ataque </h2>
-            <div class="botones">
-                <button disabled id="Bnt-Fuego" class="boton-Ataque">Fuego 🔥🔥</button>
-                <button disabled id="Bnt-Agua" class="boton-Ataque">Agua 💧💧</button>
-                <button disabled id="Bnt-Tierra" class="boton-Ataque">Rock 🪨🪨</button>
-            </div>
+
+               <Button id="Boton-mascota">Selecionar</Button>
+            </section>
+
+            <section id="ver-mapa">
+                <h1 class="titulo">Recorre el mapa con tu mokepon</h1>
+                <canvas id="mapa"></canvas>
+            </section>
+            <section id="Selecionar-ataque">
+                <h1 class="titulo"> Mokepon  </h1>
+                <h2 class="subtitulo"> Elige tu Ataque </h2>
+                <div id="contenedorBotones" class="botones">
+                </div>
             
-            <div id="Mensaje">
-                <p id="resultado"> Que gane el mejor </p>
+                <div id="Mensaje">
+                    <p id="resultado"> Que gane el mejor </p>
                     
-                <section id="Reiniciar"> 
-                <button id="boton-reiniciar"> Reiniciar </button>
+                    <section id="Reiniciar"> 
+                       <button id="boton-reiniciar"> Reiniciar </button>
                     
-                </section>
-            </div> 
+                    </section>
+                </div> 
  
-            <div class="ataques">
-                <div class="ataques-Jugador">
-                    <p id="vidas-jugador">3</p>
-                    <p id="mascota-jugador"></p>
+                    <div class="ataques">
+                    <div class="ataques-Jugador">
+                        <p id="vidas-jugador">0</p>
+                        <p id="mascota-jugador"></p>
                     <div id="ataqueJugador"></div>
                 </div>
                 
                 <div class="ataques-Enemigo">
-                    <p id="vidas-enemigo">3</p>
+                    <p id="vidas-enemigo">0</p>
                     <p id="mascota-enemigo"></p>
                     <div id="ataqueEnemigo"></div> 
                   
@@ -76,6 +82,6 @@
 
         </section>
     
-       
-</body>
-</html>
+        <script src="./Js/mokepon.js"></script>   
+    </body>
+    </html>
